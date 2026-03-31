@@ -1,11 +1,11 @@
 #### Stack Revision:
 A Stack is a Linear Data Structure that follows the principle of the Last In First Out (LIFO). This means the last element inserted inside the stack is removed first.
 #### Basic Operations:
-**`Push`**: Adds an element to the top of the Stack.
-**`Pop`**: Removes an element from the top of the Stack.
-**`isEmpty`**: Checks if the Stack is empty.
-**`isFull`**: Checks if the the Stack is full.
-**`Peek`**: Gets the value of the element of the stack without removing it.
+- **`Push`**: Adds an element to the top of the Stack.
+- **`Pop`**: Removes an element from the top of the Stack.
+- **`isEmpty`**: Checks if the Stack is empty.
+- **`isFull`**: Checks if the the Stack is full.
+- **`Peek`**: Gets the value of the element of the stack without removing it.
 
 #### Time Complexity: `O(1)`
 
