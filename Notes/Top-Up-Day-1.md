@@ -63,5 +63,5 @@ So the final prefix is:
 **Pop remaining stack:**
 - Pop `^`, `/`, `-`
 - Postfix: `abc*+def^/-`
-**Reverse postfix → PREFIX:**
-`- / ^ f e d + * c b a`
+- **Reverse postfix → PREFIX:**
+- `- / ^ f e d + * c b a`
