@@ -1,10 +1,10 @@
 import java.util.*;
+
 public class Dijkstra {
     static void addEdge(ArrayList<ArrayList<int[]>> adj, int u, int v, int w) {
         adj.get(u).add(new int[]{v, w});
         adj.get(v).add(new int[]{u, w}); 
     }
-
     static ArrayList<Integer> dijkstra(ArrayList<ArrayList<int[]>> adj, int src) {
         int n = adj.size();
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[0] - b[0]);
@@ -32,7 +32,6 @@ public class Dijkstra {
         }
         return result;
     }
-
     public static void main(String[] args) {
         int V = 5;
         ArrayList<ArrayList<int[]>> adj = new ArrayList<>();
