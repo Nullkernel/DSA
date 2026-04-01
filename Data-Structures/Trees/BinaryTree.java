@@ -1,38 +1,39 @@
-class Node{
+class Node {
     int data;
     Node left;
     Node right;
-    public Node(int key){
+    public Node (int key) {
         data = key;
         left = right = null;
     }
 }
-class binarytree{
+
+class binarytree {
     Node root = null;
-    void inorder_traversal(Node node){
-        if(node != null){
+    void inorder_traversal (Node node) {
+        if (node != null) {
             inorder_traversal(node.left);
             System.out.print(node.data + " ");
             inorder_traversal(node.right);
         }
     }
-    void pre_order_traversal(Node node){
-        if(node != null){
+    void pre_order_traversal (Node node) {
+        if (node != null) {
             System.out.print(node.data + " ");
             pre_order_traversal(node.left);
             pre_order_traversal(node.right);
         }
     }
-    void post_order_traversal(Node node){
-        if(node != null){
+    void post_order_traversal (Node node) {
+        if (node != null) {
             post_order_traversal(node.left);
             post_order_traversal(node.right);
             System.out.print(node.data + " ");
         }        
     }
 }
-public class BinaryTree{
-    public static void main(String[] args){
+public class BinaryTree {
+    public static void main (String[] args) {
         binarytree tree = new binarytree();
         tree.root = new Node(27);
         tree.root.left = new Node(12);
