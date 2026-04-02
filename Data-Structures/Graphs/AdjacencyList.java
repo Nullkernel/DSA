@@ -7,7 +7,7 @@ public class AdjacencyList {
     }
     public static void displayAdjList(List<List<Integer>> adj) {
         for (int i = 0; i < adj.size(); i++) {
-            System.out.print(i +" --> ");
+            System.out.print(i + " --> ");
             for (int j : adj.get(i)) {
                 System.out.print(j + " ");
             }

@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 class Node {
     int data;
     Node next;
@@ -19,7 +20,7 @@ class circularlinkedlist {
             tail.next = newNode;
             tail = newNode;
         }
-        System.out.println(data + " inserted at the end");
+        System.out.println(data + " Inserted at the End.");
     }
     public void insertAtBeginning(int data) {
         Node newNode = new Node(data);
@@ -30,50 +31,50 @@ class circularlinkedlist {
             newNode.next = tail.next;
             tail.next = newNode;
         }
-        System.out.println(data + " inserted at the beginning");
+        System.out.println(data + " Inserted at the Beginning.");
     }
     public void deleteFromBeginning() {
         if (tail == null) {
-            System.out.println("List is empty. Can't delete");
+            System.out.println("List is Empty. Can't Delete.");
             return;
         }
         Node head = tail.next;
         if (head == tail) {
-            System.out.println(head.data +" deleted from beginning.");
+            System.out.println(head.data + " Deleted from Beginning.");
             tail = null;
         } else {
-            System.out.println(head.data + " deleted from beginning");
+            System.out.println(head.data + " Deleted from Beginning.");
             tail.next = head.next;
         }
     }
-    public void deleteFromEnd(){
+    public void deleteFromEnd() {
         if (tail == null) {
-            System.out.println("List is empty. Can't delete");
+            System.out.println("List is Empty. Can't Delete.");
             return;
         }
-        System.out.println("Circular linked list.");
+        System.out.println("Circular Linked List.");
         Node temp = tail.next;
-        do{
-            System.out.println(temp.data +" ");
+        do {
+            System.out.println(temp.data + " ");
             temp = temp.next;
-        }while(temp != tail.next);
+        } while (temp != tail.next);
         System.out.println();
-        if(temp == tail){
-            System.out.println(temp.data +" is deleted");
+        if (temp == tail) {
+            System.out.println(temp.data + " is Deleted.");
             tail = null;
         }
-        else{
-            while(temp.next != tail){
+        else {
+            while (temp.next != tail) {
                 temp = temp.next;
             }
-            System.out.println(tail.data +" is deleted");
+            System.out.println(tail.data + " is Deleted.");
             temp.next = tail.next;
             tail = temp;
         }
     }
-    public void display(){
+    public void display() {
         if (tail == null) {
-            System.out.println("List is empty!");
+            System.out.println("List is Empty!");
             return;
         }
         Node temp = tail.next; 
@@ -83,20 +84,20 @@ class circularlinkedlist {
         } while (temp != tail.next); 
         System.out.println("null");
     }
-    public void search(int key){
+    public void search(int key) {
         if (tail == null) {
-            System.out.println("List is empty!");
+            System.out.println("List is Empty!");
             return;
         }
         Node temp = tail.next;
-        do{
-            if(temp.data == key){
-                System.out.println("Element " + key + " found ");
+        do {
+            if (temp.data == key) {
+                System.out.println("Element " + key + " Found.");
                 return;
             }
         }
         while (temp != tail.next);
-        System.out.println("Element " + key + " not found!");
+        System.out.println("Element " + key + " NOT Found!");
     }
 }
 public class CircularLinkedLists {
@@ -105,7 +106,7 @@ public class CircularLinkedLists {
         Scanner sc = new Scanner(System.in);
         int choice, data, position;
         do {
-            System.out.println("\n-----Circular Linked List Operations Menu -----");
+            System.out.println("\n---Circular Linked List Operations Menu---");
             System.out.println("1. Insert at Beginning");
             System.out.println("2. Insert at End");
             System.out.println("3. Delete from Beginning");
@@ -117,12 +118,12 @@ public class CircularLinkedLists {
             choice = sc.nextInt();
             switch (choice) {
                 case 1:
-                    System.out.print("Enter element to insert at beginning: ");
+                    System.out.print("Enter element to Insert at Beginning: ");
                     int frontdata = sc.nextInt();
                     cll.insertAtBeginning(frontdata);
                     break;
                 case 2:
-                    System.out.print("Enter element to insert at end: ");
+                    System.out.print("Enter element to Insert at End: ");
                     int enddata = sc.nextInt();
                     cll.insertAtEnd(enddata);
                     break;
@@ -133,7 +134,7 @@ public class CircularLinkedLists {
                     cll.deleteFromEnd();
                     break;
                 case 5:
-                    System.out.print("Enter element to search: ");
+                    System.out.print("Enter element to Search: ");
                     int key = sc.nextInt();
                     cll.search(key);
                     break;
@@ -144,7 +145,7 @@ public class CircularLinkedLists {
                     System.out.println("Exiting...");
                     break;
                 default:
-                    System.out.println("Invalid choice!!");
+                    System.out.println("Invalid choice!");
             }
         } while (choice != 7);
         sc.close();

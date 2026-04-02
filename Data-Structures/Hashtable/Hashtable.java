@@ -47,7 +47,7 @@ public class Hashtable {
                         " -> Key: " + hasharray[i].key +
                         ", Data: " + hasharray[i].data);
             } else {
-                System.out.println("Index " + i + " -> Empty");
+                System.out.println("Index " + i + " -> Empty.");
             }
         }
     }
