@@ -66,10 +66,10 @@ These programs are written to clearly show algorithm flow and logic rather than 
 ## How to Use This Repository?
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Pranav-173/DS_Bootcamp.git
+   git clone https://github.com/Pranav-173/DSA.git
    ```
    (or)
    
    ```bash
-   git clone https://github.com/Nullkernel/DS_Bootcamp.git
+   git clone https://github.com/Nullkernel/DSA.git
    ```
