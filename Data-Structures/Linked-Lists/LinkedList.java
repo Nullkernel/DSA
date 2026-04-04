@@ -8,7 +8,7 @@ class Node {
         this.next = null;
     }
 }
-class Singlylinkedlist {
+class LinkedList {
     private Node head;
     //----Insert At Beginning----
     public void insertAtBeginning(int data) {
