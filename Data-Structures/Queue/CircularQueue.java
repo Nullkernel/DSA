@@ -88,7 +88,7 @@ public class CircularQueue {
         int choice;
 
         do {
-            System.out.println("\n--- Queue Operations ---");
+            System.out.println("\n--- Circular Queue Operations ---");
             System.out.println("1. Enqueue");
             System.out.println("2. Dequeue");
             System.out.println("3. Peek");
