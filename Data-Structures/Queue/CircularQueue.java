@@ -59,7 +59,7 @@ class Queue {
         return count == capacity;
     }
 }
-public class DS_circularqueue {
+public class CircularQueue {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Queue size: ");
