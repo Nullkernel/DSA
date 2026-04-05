@@ -9,13 +9,18 @@ public class Fibonaccisearch {
         int size = sc.nextInt();
 
         int[] arr = new int[size];
-        System.out.println("Enter array elements: ");
+        System.out.println("Enter array elements in non-decreasing (sorted) order: ");
         for (int i = 0; i < size; i++) {
             arr[i] = sc.nextInt();
         }
 
-        Arrays.sort(arr);
-        System.out.println("Sorted Array: " + Arrays.toString(arr));
+        System.out.println("Entered Array: " + Arrays.toString(arr));
+
+        if (!isSorted(arr)) {
+            System.out.println("Invalid input: Fibonacci Search requires a sorted array in non-decreasing order.");
+            sc.close();
+            return;
+        }
 
         System.out.println("Enter the key element to be Found: ");
         int key = sc.nextInt();
@@ -66,5 +71,14 @@ public class Fibonaccisearch {
         }
 
         return -1;
+    }
+
+    public static boolean isSorted(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -6,12 +6,19 @@ public class Interpolationsearch {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the length of the Array: ");
         int n = sc.nextInt();
-        System.out.println("Enter Array elements: ");
+        System.out.println("Enter Array elements in non-decreasing (sorted) order: ");
         int arr[] = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
         System.out.println("Entered Array: " + Arrays.toString(arr));
+
+        if (!isSorted(arr)) {
+            System.out.println("Invalid input: Interpolation Search requires a sorted array in non-decreasing order.");
+            sc.close();
+            return;
+        }
+
         System.out.println("Enter the key element to be Found: ");
         int key = sc.nextInt();
         int result = interpolationSearch(arr, 0, arr.length - 1, key);
@@ -20,6 +27,7 @@ public class Interpolationsearch {
         } else {
             System.out.println("Element " + key + " was NOT Found in the entered Array.");
         }
+        sc.close();
     }
     public static int interpolationSearch(int arr[], int lo, int hi, int x) {
         int pos;
@@ -38,5 +46,14 @@ public class Interpolationsearch {
                 return interpolationSearch(arr, lo, pos - 1, x);
         }
         return -1;     
+    }
+
+    public static boolean isSorted(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
+                return false;
+            }
+        }
+        return true;
     }
 }

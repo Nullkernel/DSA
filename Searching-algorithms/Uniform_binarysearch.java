@@ -6,12 +6,19 @@ public class Uniform_binarysearch {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the length of the Array: ");
         int size = sc.nextInt();
-        System.out.println("Enter Array elements: ");
+        System.out.println("Enter Array elements in non-decreasing (sorted) order: ");
         int arr[] = new int[size];
         for (int i = 0; i < size; i++) {
             arr[i] = sc.nextInt();
         }
         System.out.println("Entered Array: " + Arrays.toString(arr));
+
+        if (!isSorted(arr)) {
+            System.out.println("Invalid input: Uniform Binary Search requires a sorted array in non-decreasing order.");
+            sc.close();
+            return;
+        }
+
         System.out.println("Enter the key element to be Found: ");
         int key = sc.nextInt();
         int result = binunisearch(arr, key);
@@ -20,6 +27,7 @@ public class Uniform_binarysearch {
         } else {
             System.out.println("Element " + key + " was NOT Found in the entered Array.");
         }
+        sc.close();
     }
     public static int binunisearch(int[] arr, int key) {
         int n = arr.length;
@@ -41,5 +49,14 @@ public class Uniform_binarysearch {
         if (index >= 0 && arr[index] == key)
             return index;
         return -1;
+    }
+
+    public static boolean isSorted(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
