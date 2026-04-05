@@ -24,6 +24,11 @@ public class DS_Interpolationsearch {
     public static int interpolationSearch(int arr[], int lo, int hi, int x) {
         int pos;
         if (lo <= hi && x >= arr[lo] && x <= arr[hi]) {
+            if (arr[lo] == arr[hi]) {
+                if (arr[lo] == x)
+                    return lo;
+                return -1;
+            }
             pos = lo + ((hi - lo) * (x - arr[lo])) / (arr[hi] - arr[lo]);
             if (arr[pos] == x)
                 return pos;
