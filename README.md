@@ -78,5 +78,10 @@ These programs are written to clearly show algorithm flow and logic rather than 
 ## Development Checks
 - Run a Java compile smoke test:
   ```bash
-  ./scripts/java-compile-smoke.sh
+  ./scripts/compile_smoke.sh
   ```
+- The smoke test:
+  - Scans `Searching-algorithms/`, `Sorting-algorithms/`, and `Data-Structures/`.
+  - Compiles files in deterministic (sorted) order.
+  - Uses isolated temporary output folders per file to avoid default-package collisions.
+  - Prints `[PASS]` / `[FAIL]` per file and exits non-zero when any file fails.
