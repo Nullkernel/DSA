@@ -1,11 +1,16 @@
-# Spanning Tree:
-- It is a subset of an undirected graph that contains all the vertices of the graph connected with the minimum number of edges.
-- Precisely, the edges of the spanning tree form a subset of the edges in the original graph.
-- If all the vertices are connected in a graph, then there exists at least one spanning tree. In fact, in a connected graph, there may exist more than one spanning tree.
-# Dijkstra's Algorithm:
-Given a ***weighted undirected*** graph and a source vertex ***`src`***. We need to find the shortest path distances from the source vertex to all other vertices in the graph.  
-***Note:*** The given graph does not contain any negative edge.
-### Steps:
+# Single-Source Shortest Path (Dijkstra's Algorithm)
+
+This section covers **Dijkstra's algorithm**, which is used to find the shortest path distance from one source vertex to all other vertices in a weighted graph.
+
+- Works for graphs with **non-negative edge weights**.
+- Commonly implemented with a **min-priority queue (min-heap)** for efficiency.
+
+## Problem Statement
+Given a weighted graph and a source vertex `src`, find the shortest path distances from `src` to every other vertex.
+
+**Note:** Dijkstra's algorithm does **not** support negative edge weights.
+
+## Steps
 - ![file.webp](https://media.geeksforgeeks.org/wp-content/uploads/20251113160159617213/file.webp)
 - ![file.webp](https://media.geeksforgeeks.org/wp-content/uploads/20251113160159416648/file.webp)
 - ![file.webp](https://media.geeksforgeeks.org/wp-content/uploads/20251113160159169679/file.webp)
