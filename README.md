@@ -21,7 +21,7 @@ The repository is organized into folders based on topic for better navigation an
   - Binary Search Tree.
   - AVL Tree.
 - Graphs :
-  - Adjaceny Matrix.
+  - Adjacency Matrix.
   - Adjacency List.
   - BFS algorithm.
   - DFS algorithm.
@@ -73,3 +73,10 @@ These programs are written to clearly show algorithm flow and logic rather than 
    ```bash
    git clone https://github.com/Nullkernel/DSA.git
    ```
+
+2. **Run a Java compile smoke test (recommended):**
+   ```bash
+   ./scripts/java_compile_smoke_test.sh
+   ```
+
+This checks that each Java source file compiles and helps catch syntax or class-name/file-name issues early.
