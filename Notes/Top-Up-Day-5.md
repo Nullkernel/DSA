@@ -1,4 +1,5 @@
-#**Hashing**
+####Hashing
+
 **Hashing:** It is a fundamental technique in data structures used to store and retrieve data with an average time 
 complexity of O(1). In a hash table, a new index is processed using the keys and the element corresponding to 
 that key is stored in the index.This process is known as hashing.
