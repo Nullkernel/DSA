@@ -1,11 +1,27 @@
 //Radix sort:
 import java.util.Scanner;
 import java.util.Arrays;
-public class DS_Radixsort {
+public class Radixsort {
+    /*
+     * Edge-case behavior:
+     * - Negative size is rejected.
+     * - Size 0 exits early with "Nothing to sort/search".
+     * - Null/empty arrays are ignored by radix sort.
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter array size : ");
         int n = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Invalid input: size cannot be negative.");
+            sc.close();
+            return;
+        }
+        if (n == 0) {
+            System.out.println("Nothing to sort/search");
+            sc.close();
+            return;
+        }
         System.out.println("Enter array elements : ");
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
@@ -14,8 +30,12 @@ public class DS_Radixsort {
         System.out.println("Entered array : " + Arrays.toString(arr));
         radixsort(arr);
         System.out.println("Sorted array : " + Arrays.toString(arr));
+        sc.close();
     }
     public static void radixsort(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return;
+        }
         int max = getMax(arr); 
         for (int exp = 1; max / exp > 0; exp *= 10) {
             countSort(arr, exp);

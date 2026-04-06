@@ -1,5 +1,8 @@
-# What is a Spanning Tree?
-- **A spanning tree is a subset of a graph `G`, which has all the vertices covered with minimum possible number of edges.**
+# Spanning Tree:
+- It is a subset of an undirected graph that contains all the vertices of the graph connected with the minimum number of edges.
+- Precisely, the edges of the spanning tree form a subset of the edges in the original graph.
+- If all the vertices are connected in a graph, then there exists at least one spanning tree. In fact, in a connected graph, there may exist more than one spanning tree.
+- **In other words:** A spanning tree is a subset of a graph `G`, which has all the vertices covered with minimum possible number of edges.
 - **Example:**
 ```
 		A         A          A         A

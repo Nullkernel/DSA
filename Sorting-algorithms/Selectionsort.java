@@ -1,11 +1,27 @@
 // Selection sort:
 import java.util.Scanner;
 import java.util.Arrays;
-public class DS_Selectionsort{
+public class Selectionsort{
+    /*
+     * Edge-case behavior:
+     * - Negative size is rejected.
+     * - Size 0 exits early with "Nothing to sort/search".
+     * - Null/empty arrays are ignored by the algorithm.
+     */
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the array size : ");
         int n = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Invalid input: size cannot be negative.");
+            sc.close();
+            return;
+        }
+        if (n == 0) {
+            System.out.println("Nothing to sort/search");
+            sc.close();
+            return;
+        }
         int[] arr = new int[n];
         for(int i = 0; i < n; i ++){
             arr[i] = sc.nextInt();
@@ -13,8 +29,12 @@ public class DS_Selectionsort{
         System.out.println("Entered array : "+ Arrays.toString(arr));
         selectionsort(arr);
         System.out.println("Sorted array : "+ Arrays.toString(arr));
+        sc.close();
     }
     public static void selectionsort(int[] arr){
+        if (arr == null || arr.length == 0) {
+            return;
+        }
         int n = arr.length;
         for(int i = 0; i < n-1;i++){
             int min_index = i;
