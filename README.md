@@ -80,8 +80,18 @@ These programs are written to clearly show algorithm flow and logic rather than 
   ```bash
   ./scripts/compile_smoke.sh
   ```
-- The smoke test:
+- Compile smoke test details:
   - Scans `Searching-algorithms/`, `Sorting-algorithms/`, and `Data-Structures/`.
   - Compiles files in deterministic (sorted) order.
   - Uses isolated temporary output folders per file to avoid default-package collisions.
   - Prints `[PASS]` / `[FAIL]` per file and exits non-zero when any file fails.
+
+- Run a Java runtime smoke test:
+  ```bash
+  ./scripts/runtime_smoke.sh
+  ```
+- Runtime smoke test details:
+  - Compiles and executes selected runnable examples (currently `Data-Structures/Queue/BoundedQueue.java`).
+  - Captures stdout/stderr from compile and runtime execution.
+  - Fails if runtime output contains `Exception in thread`, catching uncaught exception regressions.
+  - Exits non-zero when any runtime check fails.
