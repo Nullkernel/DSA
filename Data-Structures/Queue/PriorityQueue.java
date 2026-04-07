@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-class PriorityQueue {
+class MaxHeapPriorityQueue {
     int[] heap;
     int size;
     int capacity;
     // Constructor
-    PriorityQueue(int capacity) {
+    MaxHeapPriorityQueue(int capacity) {
         this.capacity = capacity;
         heap = new int[capacity];
         size = 0;
@@ -82,10 +82,10 @@ class PriorityQueue {
         System.out.println();
     }
 }
-public class Main {
+public class PriorityQueue {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        PriorityQueue pq = new PriorityQueue(100);
+        MaxHeapPriorityQueue pq = new MaxHeapPriorityQueue(100);
         while (true) {
             System.out.println("\n--- Priority Queue Menu ---");
             System.out.println("1. Insert");
