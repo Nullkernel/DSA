@@ -5,7 +5,7 @@ public class Insertionsort{
     /*
      * Edge-case behavior:
      * - Negative size is rejected.
-     * - Size 0 exits early with "Nothing to sort/search".
+     * - Size 0 exits early with "Nothing to sort."
      * - Null/empty arrays are ignored by the algorithm.
      */
     public static void main(String[] args){
@@ -18,7 +18,7 @@ public class Insertionsort{
             return;
         }
         if (n == 0) {
-            System.out.println("Nothing to sort/search");
+            System.out.println("Nothing to sort.");
             sc.close();
             return;
         }
