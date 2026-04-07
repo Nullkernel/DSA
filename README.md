@@ -17,7 +17,8 @@ The repository is organized into folders based on topic for better navigation an
   - Linear Queue.
   - Circular Queue. 
 - Trees : 
-  - Binary Tree.
+  - Binary Tree (`BinaryTree.java`) manual traversal demo with a manually wired tree.
+  - Binary Tree full implementation (`BinaryTreeImplementation.java`) with insert/search/delete (leaf, one child, two children).
   - Binary Search Tree.
   - AVL Tree.
 - Graphs :
