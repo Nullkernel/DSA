@@ -1,4 +1,4 @@
-## Linear Search:
+# Linear Search:
 ### Definition: 
 It is the simplest searching algorithm that checks every element in a list sequentially until it finds the target element or reaches the end of the list. It doesn't require the data to be sorted and works well on small or unsorted data.
 
