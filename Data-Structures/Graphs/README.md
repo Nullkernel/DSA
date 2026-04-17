@@ -17,3 +17,18 @@
     - For each vertex, store a list of its adjacent vertices.
     - Pros: **`O(V+E)`** memory and efficient to iterate neighbors - good for sparse graphs.
     - Cons: Checking existence of a specific edge may be slower than with a matrix.
+# Spanning Tree:
+- It is a subset of an undirected graph that contains all the vertices of the graph connected with the minimum number of edges.
+- Precisely, the edges of the spanning tree form a subset of the edges in the original graph.
+- If all the vertices are connected in a graph, then there exists at least one spanning tree. In fact, in a connected graph, there may exist more than one spanning tree.
+- **In other words:** A spanning tree is a subset of a graph `G`, which has all the vertices covered with minimum possible number of edges.
+- **Example:**
+```
+		A         A          A         A
+	   / \  =>   / \  (or)  /    (or)   \
+	  C---B     C   B      C---B     C---B
+```
+### Applications of Spanning Tree:
+- Civil Network Planning.
+- Computer Network Routing Protocol.
+- Cluster Analysis.
