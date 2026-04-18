@@ -1,47 +1,4 @@
-# 1) Balanced Brackets Code:
-## Meaning:
-A bracket expression is **balanced** if every opening bracket has a matching closing bracket in the correct order.
-Examples:
-- `()`, `{[]}`, `((a+b)*c)` → balanced.
-- `([)]`, `(((`, `())` → not balanced.
-## Idea:
-Use a **stack**:
-- Push opening brackets: `(`, `{`, `[`.
-- When a closing bracket comes:
-    - stack must not be empty.
-    - top of stack must be the matching opening bracket.
-- At the end, stack must be empty.
-## Algorithm:
-1. Read the expression.
-2. For each character:
-    - If it is an opening bracket, push it.
-    - If it is a closing bracket:
-        - If stack is empty, return false.
-        - Pop top and check match.
-3. If stack is empty after processing all characters, return true.
-## Matching pairs:
-- `(` matches `)`.
-- `{` matches `}`.
-- `[` matches `]`.
-## Time and Space Complexity:
-- Time: `O(n)`.
-- Space: `O(n)`.
-## Simple pseudocode:
-```bash
-balanced(expr):  
-	create empty stack  
-	for each ch in expr:  
-		if ch is opening bracket:  
-			push ch  
-		else if ch is closing bracket:  
-			if stack is empty:  
-				return false  
-			top = pop()  
-			if not matching(top, ch):  
-				return false  
-	return stack is empty
-```
-# 2) Infix to Postfix:
+# Infix to Postfix:
 ## Meaning;
 - **Infix**: operator is between operands  
     Example: `A+B*C`.
@@ -101,7 +58,7 @@ infixToPostfix(expr):
     while stack not empty:
         append pop() to output
 ```
-# 3) Revised Stack:
+# Revised Stack:
 ## Definition:
 A **stack** is a linear data structure that follows **LIFO**:  
 **Last In, First Out**.
@@ -168,7 +125,7 @@ pop():
         top = top - 1
         return x
 ```
-# 4) Revised Linked List:
+# Revised Linked List:
 ## Definition:
 A **linked list** is a dynamic linear data structure made of nodes.
 Each node contains:
