@@ -38,7 +38,7 @@ public class LinearSearch {
         }
         sc.close();
     }
-    public static int linearsearch(int[] arr, int key){
+    public static int linearsearch(int[] arr, int key) {
         if (arr == null || arr.length == 0) {
             return -1;
         }
