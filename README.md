@@ -95,5 +95,5 @@ These programs are written to clearly show algorithm flow and logic rather than 
    (or)
    
    ```bash
-   git clone https://github.com/Nullkernel/DSA.git
+   git clone https://github.com/amalbijoy/DSA.git
    ```
